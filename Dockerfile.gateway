@@ -1,6 +1,5 @@
 FROM tykio/tyk-gateway:v4.1rc26
 COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
-ENV TYK_GW_LISTENPORT="$PORT"
 EXPOSE 8080
 ENTRYPOINT [""]
 CMD env
