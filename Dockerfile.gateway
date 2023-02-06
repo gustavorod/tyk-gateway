@@ -3,6 +3,7 @@ COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
 COPY entrypoint.sh /opt/tyk-gateway
 RUN ["chmod", "+x", "./entrypoint.sh"]
 EXPOSE 8080
-ENTRYPOINT [""]
+ENV PORT=8080
+ENTRYPOINT ["./entrypoint.sh"]
 #CMD export TYK_GW_LISTENPORT=$PORT; env; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
-CMD ./entrypoint.sh; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
+#CMD ./entrypoint.sh; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf

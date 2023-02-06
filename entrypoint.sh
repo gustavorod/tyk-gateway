@@ -2,7 +2,7 @@
 set -e
 
 # Mapping to Heroku port
-export TYK_GW_LISTENPORT=$PORT
+export TYK_GW_LISTENPORT="${PORT:-8080}" 
 
 # Set the delimiter
 IFS='@'
@@ -22,7 +22,9 @@ redisPassword=${redisCredentials[2]}
 
 export TYK_GW_STORAGE_USERNAME=$redisUsername
 export TYK_GW_STORAGE_PASSWORD=$redisPassword
-export TYK_GW_STORAGE_HOST=${redisAddress[0]}
-export TYK_GW_STORAGE_PORT=${redisAddress[1]}
+export TYK_GW_STORAGE_HOST="${redisAddress[0]:-localhost}"
+export TYK_GW_STORAGE_PORT="${redisAddress[1]:-6379}"
 
 env
+
+${PWD}/tyk start --conf=./deployments/tyk-gateway/tyk.conf
