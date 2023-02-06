@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile.gateway
   config:
-    TYK_GW_LISTENPORT: 8888
+    TYK_GW_LISTENPORT: ${PORT}

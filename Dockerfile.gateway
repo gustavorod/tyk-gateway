@@ -2,6 +2,7 @@ FROM tykio/tyk-gateway:v4.1rc26
 COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
 EXPOSE 8080
 ENTRYPOINT [""]
+ENV TYK_GW_LISTENPORT 8000
 CMD env
 #CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
 #CMD tyk run --conf=./deployments/tyk-gateway/tyk.conf --listen_port $PORT
