@@ -1,7 +1,5 @@
-setup:
-  addons:
-    - plan: stackhero-redis:ist-ebi1rc
-      as: tyk_redis
 build:
   docker:
     web: Dockerfile.gateway
+  config:
+    PORT: $PORT
