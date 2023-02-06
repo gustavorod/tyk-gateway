@@ -22,6 +22,4 @@ export TYK_PMP_ANALYTICSSTORAGECONFIG_PASSWORD=$redisPassword
 export TYK_PMP_ANALYTICSSTORAGECONFIG_HOST="${redisAddress[0]:-tyk-redis}"
 export TYK_PMP_ANALYTICSSTORAGECONFIG_PORT="${redisAddress[1]:-6379}"
 
-env
-
 ${PWD}/tyk-pump --conf=/opt/tyk-gateway/deployments/tyk-pump/pump.conf
