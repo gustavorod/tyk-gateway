@@ -23,7 +23,7 @@
     }
   },
   "proxy": {
-    "listen_path": "/staging/",
+    "listen_path": "/",
     "target_url": "https://api-staging.syky.com/",
     "strip_listen_path": true
   },
