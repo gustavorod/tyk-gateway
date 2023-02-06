@@ -25,6 +25,6 @@ export TYK_GW_STORAGE_PASSWORD=$redisPassword
 export TYK_GW_STORAGE_HOST="${redisAddress[0]:-localhost}"
 export TYK_GW_STORAGE_PORT="${redisAddress[1]:-6379}"
 
-#env
+env
 
 ${PWD}/tyk start --conf=/opt/tyk-gateway/deployments/tyk-gateway/tyk.conf
