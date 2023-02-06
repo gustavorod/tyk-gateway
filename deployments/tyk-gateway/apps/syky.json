@@ -18,9 +18,25 @@
     "versions": {
       "Default": {
         "name": "Default",
-        "use_extended_paths": true
+        "use_extended_paths": true,
+        "extended_paths": {
+          "cache": [
+            "nfts",
+            "nfts/{slug}",
+            "nfts/{slug}/stats",
+            "cms/launch-site/scene-config"
+          ]
+        }
       }
     }
+  },
+  "cache_options": {
+    "cache_timeout": 300,
+    "enable_cache": true,
+    "cache_all_safe_requests": false,
+    "enable_upstream_cache_control": false,
+    "cache_by_headers": [],
+    "cache_response_codes": [200]
   },
   "proxy": {
     "listen_path": "/",
