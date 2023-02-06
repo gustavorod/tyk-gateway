@@ -1,4 +1,4 @@
 build:
   docker:
     web: Dockerfile.gateway
-    worker: deployments/Dockerfile.pump
+    worker: Dockerfile.pump
