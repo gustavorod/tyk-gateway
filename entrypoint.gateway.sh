@@ -27,4 +27,4 @@ export TYK_GW_STORAGE_PORT="${redisAddress[1]:-6379}"
 
 #env
 
-${PWD}/tyk start --conf=./deployments/tyk-gateway/tyk.conf
+${PWD}/tyk start --conf=/opt/tyk-gateway/deployments/tyk-gateway/tyk.conf

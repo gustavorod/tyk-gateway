@@ -1,6 +1,6 @@
 FROM tykio/tyk-gateway:v4.1rc26
 COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
-COPY entrypoint.sh /opt/tyk-gateway
-RUN ["chmod", "+x", "./entrypoint.gateway.sh"]
+COPY entrypoint.gateway.sh /opt/tyk-gateway
+RUN ["chmod", "+x", "/opt/tyk-gateway/entrypoint.gateway.sh"]
 EXPOSE 8080
-ENTRYPOINT ["./entrypoint.gateway.sh"]
+ENTRYPOINT ["/opt/tyk-gateway/entrypoint.gateway.sh"]
