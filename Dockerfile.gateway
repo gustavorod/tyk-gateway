@@ -5,9 +5,4 @@ RUN ["chmod", "+x", "./entrypoint.sh"]
 EXPOSE 8080
 ENTRYPOINT ["./entrypoint.sh"]
 #CMD export TYK_GW_LISTENPORT=$PORT; env; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
-#CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
-#CMD tyk run --conf=./deployments/tyk-gateway/tyk.conf --listen_port $PORT
-#TYK_GW_STORAGE_PORT
-#TYK_GW_STORAGE_HOST
-#TYK_GW_STORAGE_PASSWORD
-#TYK_GW_STORAGE_USERNAME
+CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
