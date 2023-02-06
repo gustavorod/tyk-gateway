@@ -3,5 +3,6 @@ COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
 ENV TYK_GW_LISTENPORT=${PORT}
 EXPOSE 8080
 ENTRYPOINT [""]
-CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
+CMD env
+#CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
 #CMD tyk run --conf=./deployments/tyk-gateway/tyk.conf --listen_port $PORT
