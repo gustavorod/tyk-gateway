@@ -1,5 +1,5 @@
 FROM tykio/tyk-pump-docker-pub:v1.7.0-rc1
-COPY deployments/tyk-pump /opt/tyk-gateway/deployments/tyk-pump
+COPY tyk-pump /opt/tyk-gateway/deployments/tyk-pump
 COPY entrypoint.pump.sh /opt/tyk-gateway
 RUN ["chmod", "+x", "/opt/tyk-gateway/entrypoint.pump.sh"]
 EXPOSE 8083
