@@ -1,7 +1,13 @@
 FROM tykio/tyk-gateway:v4.1rc26
 COPY deployments/tyk-gateway /opt/tyk-gateway/deployments/tyk-gateway
+COPY entrypoint.sh /opt/tyk-gateway
+RUN ["chmod", "+x", "./entrypoint.sh"]
 EXPOSE 8080
-ENTRYPOINT [""]
-CMD export TYK_GW_LISTENPORT=$PORT; env; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
+ENTRYPOINT ["./entrypoint.sh"]
+#CMD export TYK_GW_LISTENPORT=$PORT; env; ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
 #CMD ./tyk start --conf=./deployments/tyk-gateway/tyk.conf
 #CMD tyk run --conf=./deployments/tyk-gateway/tyk.conf --listen_port $PORT
+#TYK_GW_STORAGE_PORT
+#TYK_GW_STORAGE_HOST
+#TYK_GW_STORAGE_PASSWORD
+#TYK_GW_STORAGE_USERNAME
